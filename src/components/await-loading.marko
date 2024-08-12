@@ -1,0 +1,26 @@
+$ const loadPlaces = () => {
+  // fake time out
+  const reponse = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(["Melbourne", "Sydney"]);
+    }, 5_000);
+  });
+  return reponse;
+};
+
+<await(loadPlaces()) client-reorder>
+  <@then|[origin, destination]|>
+    Origin is: ${origin} Destination is: ${destination}
+  </@then>
+  <@catch|err|>
+    <!-- Render some error message -->
+    <!--  Log the error to Sentry -->
+  </@catch>
+  <@placeholder>
+    <!-- Displays while promise is pending -->
+    <label>
+      Loading…
+      <progress/>
+    </label>
+  </@placeholder>
+</await>
