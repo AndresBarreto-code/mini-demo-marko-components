@@ -1,0 +1,25 @@
+<div class="container">
+  <main>
+    <let/count=0/>
+    <p>You clicked ${count} times</p>
+    <button onClick() { count++; }>
+      Click me
+    </button>
+  </main>
+</div>
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1em, 2vw, 2em);
+    padding: 1em;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+  }
+  img.logo {
+    width: 12em;
+  }
+</style>

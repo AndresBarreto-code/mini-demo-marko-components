@@ -1,0 +1,32 @@
+class {
+  onCreate() {
+    this.state = { count: 0 };
+  }
+  increment() {
+    this.state.count++;
+  }
+}
+<div class="container">
+  <main>
+    <div>The count is ${state.count}</div>
+    <button on-click("increment")>
+      Increment
+    </button>
+  </main>
+</div>
+style {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1em, 2vw, 2em);
+    padding: 1em;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+  }
+  img.logo {
+    width: 12em;
+  }
+}
