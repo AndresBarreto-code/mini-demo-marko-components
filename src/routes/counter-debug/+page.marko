@@ -1,8 +1,8 @@
 <div class="container">
   <main>
     <let/count=0/>
-    <let/doubleCount=count * 2/>
-    <!-- <const/doubleCount=count * 2/> -->
+    <!-- <let/doubleCount=count * 2/> -->
+    <const/doubleCount=count * 2/>
     <p>You clicked ${count} times</p>
     <p>Double count: ${doubleCount}</p>
     <button onClick() { count++; }>
